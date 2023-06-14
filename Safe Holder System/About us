@@ -1,0 +1,160 @@
+package SafeHolder;
+
+import java.awt.EventQueue;
+
+import javax.swing.JFrame;
+import java.awt.Color;
+import javax.swing.JLabel;
+import javax.swing.ImageIcon;
+import javax.swing.JPanel;
+import javax.swing.border.BevelBorder;
+import javax.swing.SwingConstants;
+import java.awt.Font;
+import javax.swing.JButton;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
+import javax.swing.JTextField;
+import javax.swing.JPasswordField;
+import javax.swing.JRadioButton;
+import javax.swing.JComboBox;
+import javax.swing.DefaultComboBoxModel;
+import javax.swing.JScrollPane;
+import javax.swing.JTextPane;
+import javax.swing.JTextArea;
+import javax.swing.JEditorPane;
+import javax.swing.JScrollBar;
+import javax.swing.ScrollPaneConstants;
+
+public class About_us {
+
+	JFrame frmSafeHolder;
+
+	/**
+	 * Launch the application.
+	 */
+	public static void main(String[] args) {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					About_us window = new About_us();
+					window.frmSafeHolder.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	}
+
+	/**
+	 * Create the application.
+	 */
+	public About_us() {
+		initialize();
+	}
+
+	/**
+	 * Initialize the contents of the frame.
+	 */
+	private void initialize() {
+		frmSafeHolder = new JFrame();
+		frmSafeHolder.getContentPane().setBackground(new Color(230, 230, 230));
+		frmSafeHolder.getContentPane().setLayout(null);
+		
+		JButton btnBack = new JButton("Home");
+		btnBack.setBackground(new Color(230, 230, 230));
+		btnBack.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				Main window = new Main();
+				window.frmSafeHolder.setVisible(true);
+				frmSafeHolder.dispose();
+			}
+		});
+		btnBack.setFocusable(false);
+		btnBack.setBounds(276, 22, 104, 30);
+		frmSafeHolder.getContentPane().add(btnBack);
+		
+		JPanel panel_1 = new JPanel();
+		panel_1.setBounds(10, 11, 256, 47);
+		panel_1.setBorder(new BevelBorder(BevelBorder.RAISED, null, null, null, null));
+		panel_1.setBackground(new Color(230, 230, 230));
+		frmSafeHolder.getContentPane().add(panel_1);
+		
+		JLabel lblNewLabel_1 = new JLabel("SAFE HOLDER");
+		panel_1.add(lblNewLabel_1);
+		lblNewLabel_1.setForeground(new Color(0, 128, 255));
+		lblNewLabel_1.setFont(new Font("Arial", Font.BOLD, 30));
+		lblNewLabel_1.setHorizontalAlignment(SwingConstants.CENTER);
+		
+		JPanel panel = new JPanel();
+		panel.setBorder(new BevelBorder(BevelBorder.LOWERED, null, null, null, null));
+		panel.setBounds(10, 69, 464, 281);
+		frmSafeHolder.getContentPane().add(panel);
+		panel.setLayout(null);
+		
+		JLabel lblNewLabel = new JLabel("As a \"Safe Holder,\" our primary purpose is to provide a secure and reliable plat- ");
+		lblNewLabel.setFont(new Font("Arial", Font.PLAIN, 12));
+		lblNewLabel.setBounds(10, 11, 465, 19);
+		panel.add(lblNewLabel);
+		
+		JLabel lblIndividualsToStore = new JLabel("form for individuals to store their personal notes and information while ensuring");
+		lblIndividualsToStore.setFont(new Font("Arial", Font.PLAIN, 12));
+		lblIndividualsToStore.setBounds(10, 31, 444, 19);
+		panel.add(lblIndividualsToStore);
+		
+		JLabel lblAndEncryptionWe = new JLabel("the utmost privacy and encryption. We understand the importance of maintaining");
+		lblAndEncryptionWe.setFont(new Font("Arial", Font.PLAIN, 12));
+		lblAndEncryptionWe.setBounds(10, 49, 444, 19);
+		panel.add(lblAndEncryptionWe);
+		
+		JLabel lblSensitiveDataAnd = new JLabel("the confidentiality of sensitive data, and our services are designed to prioritize the ");
+		lblSensitiveDataAnd.setFont(new Font("Arial", Font.PLAIN, 12));
+		lblSensitiveDataAnd.setBounds(10, 68, 444, 19);
+		panel.add(lblSensitiveDataAnd);
+		
+		JLabel lblUsersInformation = new JLabel("security and protection of our users' information.");
+		lblUsersInformation.setFont(new Font("Arial", Font.PLAIN, 12));
+		lblUsersInformation.setBounds(10, 87, 444, 19);
+		panel.add(lblUsersInformation);
+		
+		JLabel lblHeresAnOverview = new JLabel("Here's an overview of the key features and functionalities we offer:");
+		lblHeresAnOverview.setFont(new Font("Arial", Font.PLAIN, 12));
+		lblHeresAnOverview.setBounds(10, 117, 382, 19);
+		panel.add(lblHeresAnOverview);
+		
+		JLabel lblEncryptedStorage = new JLabel("1. Encrypted Storage: We employ robust encryption algorithms to safeguard the ");
+		lblEncryptedStorage.setFont(new Font("Arial", Font.PLAIN, 12));
+		lblEncryptedStorage.setBounds(10, 137, 444, 19);
+		panel.add(lblEncryptedStorage);
+		
+		JLabel lblDataStoredWithin = new JLabel("data stored within our platform.");
+		lblDataStoredWithin.setFont(new Font("Arial", Font.PLAIN, 12));
+		lblDataStoredWithin.setBounds(22, 157, 417, 19);
+		panel.add(lblDataStoredWithin);
+		
+		JLabel lblDataStoredWithin_1 = new JLabel("importance to us.");
+		lblDataStoredWithin_1.setFont(new Font("Arial", Font.PLAIN, 12));
+		lblDataStoredWithin_1.setBounds(23, 196, 432, 19);
+		panel.add(lblDataStoredWithin_1);
+		
+		JLabel lblEncryptedStorage_1 = new JLabel("2. Privacy and Confidentiality: Respecting the privacy of our users is of utmost ");
+		lblEncryptedStorage_1.setFont(new Font("Arial", Font.PLAIN, 12));
+		lblEncryptedStorage_1.setBounds(10, 176, 444, 19);
+		panel.add(lblEncryptedStorage_1);
+		
+		JLabel lblDataStoredWithin_2 = new JLabel("individuals to easily create, organize, and manage their notes.");
+		lblDataStoredWithin_2.setFont(new Font("Arial", Font.PLAIN, 12));
+		lblDataStoredWithin_2.setBounds(23, 237, 431, 19);
+		panel.add(lblDataStoredWithin_2);
+		
+		JLabel lblEncryptedStorage_2 = new JLabel("3. User-Friendly Interface: Our platform is designed to be user-friendly, allowing");
+		lblEncryptedStorage_2.setFont(new Font("Arial", Font.PLAIN, 12));
+		lblEncryptedStorage_2.setBounds(10, 217, 444, 19);
+		panel.add(lblEncryptedStorage_2);
+		frmSafeHolder.setTitle("Safe Holder");
+		frmSafeHolder.setBounds(100, 100, 500, 400);
+		frmSafeHolder.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frmSafeHolder.setTitle("Safe Holder");
+		frmSafeHolder.setBounds(100, 100, 500, 400);
+		frmSafeHolder.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+	}
+}

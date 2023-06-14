@@ -1,0 +1,122 @@
+package SafeHolder;
+
+import java.awt.EventQueue;
+
+import javax.swing.JFrame;
+import java.awt.Color;
+import javax.swing.JLabel;
+import javax.swing.ImageIcon;
+import javax.swing.JPanel;
+import javax.swing.border.BevelBorder;
+import javax.swing.SwingConstants;
+import java.awt.Font;
+import javax.swing.JButton;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
+
+public class Main {
+
+	JFrame frmSafeHolder;
+
+	/**
+	 * Launch the application.
+	 */
+	public static void main(String[] args) {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					Main window = new Main();
+					window.frmSafeHolder.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	}
+
+	/**
+	 * Create the application.
+	 */
+	public Main() {
+		initialize();
+	}
+
+	/**
+	 * Initialize the contents of the frame.
+	 */
+	private void initialize() {
+		frmSafeHolder = new JFrame();
+		frmSafeHolder.getContentPane().setBackground(new Color(230, 230, 230));
+		frmSafeHolder.getContentPane().setLayout(null);
+		
+		JPanel panel_1 = new JPanel();
+		panel_1.setBorder(new BevelBorder(BevelBorder.RAISED, null, null, null, null));
+		panel_1.setBackground(new Color(230, 230, 230));
+		panel_1.setBounds(112, 11, 256, 47);
+		frmSafeHolder.getContentPane().add(panel_1);
+		
+		JLabel lblNewLabel_1 = new JLabel("SAFE HOLDER");
+		panel_1.add(lblNewLabel_1);
+		lblNewLabel_1.setForeground(new Color(0, 128, 255));
+		lblNewLabel_1.setFont(new Font("Arial", Font.BOLD, 30));
+		lblNewLabel_1.setHorizontalAlignment(SwingConstants.CENTER);
+		
+		JPanel panel = new JPanel();
+		panel.setBackground(new Color(230, 230, 230));
+		panel.setBorder(new BevelBorder(BevelBorder.LOWERED, null, null, null, null));
+		panel.setBounds(10, 287, 464, 47);
+		frmSafeHolder.getContentPane().add(panel);
+		panel.setLayout(null);
+		
+		JButton btnSignIn = new JButton("Sign In");
+		btnSignIn.setFocusable(false);
+		btnSignIn.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				
+				Sign_In Sign_In = new Sign_In();
+				Sign_In.frmSafeHolder.setVisible(true);
+				frmSafeHolder.dispose();
+				
+			}
+		});
+		btnSignIn.setFont(new Font("Arial", Font.PLAIN, 11));
+		btnSignIn.setBounds(10, 11, 119, 25);
+		panel.add(btnSignIn);
+		
+		JButton btnAboutUs = new JButton("About Us");
+		btnAboutUs.setFocusable(false);
+		btnAboutUs.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				
+				About_us window = new About_us();
+				window.frmSafeHolder.setVisible(true);
+				frmSafeHolder.dispose();
+			}
+		});
+		btnAboutUs.setFont(new Font("Arial", Font.PLAIN, 11));
+		btnAboutUs.setBounds(169, 11, 119, 25);
+		panel.add(btnAboutUs);
+		
+		JButton btnLogIn = new JButton("Log In");
+		btnLogIn.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				
+				Log_In Sign_In = new Log_In();
+				Sign_In.frmSafeHolder.setVisible(true);
+				frmSafeHolder.dispose();
+			}
+		});
+		btnLogIn.setFocusable(false);
+		btnLogIn.setFont(new Font("Arial", Font.PLAIN, 11));
+		btnLogIn.setBounds(335, 12, 119, 25);
+		panel.add(btnLogIn);
+		
+		JLabel lblNewLabel = new JLabel("");
+		lblNewLabel.setIcon(new ImageIcon("C:\\Users\\user\\Pictures\\1231231231231.png"));
+		lblNewLabel.setBounds(111, 54, 250, 222);
+		frmSafeHolder.getContentPane().add(lblNewLabel);
+		frmSafeHolder.setTitle("Safe Holder");
+		frmSafeHolder.setBounds(100, 100, 500, 400);
+		frmSafeHolder.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+	}
+}

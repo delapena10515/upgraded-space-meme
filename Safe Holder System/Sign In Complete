@@ -1,0 +1,96 @@
+package SafeHolder;
+
+import java.awt.EventQueue;
+
+import javax.swing.JFrame;
+import java.awt.Color;
+import javax.swing.JLabel;
+import javax.swing.ImageIcon;
+import javax.swing.JPanel;
+import javax.swing.border.BevelBorder;
+import javax.swing.SwingConstants;
+import java.awt.Font;
+import javax.swing.JButton;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
+import javax.swing.JTextField;
+import javax.swing.JPasswordField;
+import javax.swing.JRadioButton;
+import javax.swing.JComboBox;
+import javax.swing.DefaultComboBoxModel;
+import javax.swing.JScrollPane;
+import javax.swing.JTextPane;
+import javax.swing.JTextArea;
+import javax.swing.JEditorPane;
+import javax.swing.JScrollBar;
+import javax.swing.ScrollPaneConstants;
+
+public class SignInComplete {
+
+	JFrame frmSafeHolder;
+
+	/**
+	 * Launch the application.
+	 */
+	public static void main(String[] args) {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					SignInComplete window = new SignInComplete();
+					window.frmSafeHolder.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	}
+
+	/**
+	 * Create the application.
+	 */
+	public SignInComplete() {
+		initialize();
+	}
+
+	/**
+	 * Initialize the contents of the frame.
+	 */
+	private void initialize() {
+		frmSafeHolder = new JFrame();
+		frmSafeHolder.getContentPane().setBackground(new Color(230, 230, 230));
+		frmSafeHolder.getContentPane().setLayout(null);
+		frmSafeHolder.setTitle("Sign In");
+		frmSafeHolder.setBounds(100, 100, 300, 140);
+		frmSafeHolder.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		
+		JPanel panel = new JPanel();
+		panel.setBackground(new Color(223, 223, 223));
+		panel.setBorder(new BevelBorder(BevelBorder.LOWERED, null, null, null, null));
+		panel.setBounds(10, 11, 264, 79);
+		frmSafeHolder.getContentPane().add(panel);
+		panel.setLayout(null);
+		
+		JLabel lblNewLabel = new JLabel("Sign In Complete!");
+		lblNewLabel.setHorizontalAlignment(SwingConstants.CENTER);
+		lblNewLabel.setFont(new Font("Arial", Font.PLAIN, 14));
+		lblNewLabel.setBounds(71, 7, 123, 20);
+		panel.add(lblNewLabel);
+		
+		JButton btnBack = new JButton("Log In!");
+		btnBack.setBounds(79, 38, 104, 30);
+		panel.add(btnBack);
+		btnBack.setBackground(new Color(230, 230, 230));
+		btnBack.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				Log_In Sign_In = new Log_In();
+				Sign_In.frmSafeHolder.setVisible(true);
+				frmSafeHolder.dispose();
+
+			}
+		});
+		btnBack.setFocusable(false);
+		frmSafeHolder.setTitle("Safe Holder");
+		frmSafeHolder.setBounds(100, 100, 300, 140);
+		frmSafeHolder.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+	}
+}
